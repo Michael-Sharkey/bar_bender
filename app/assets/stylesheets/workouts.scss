@@ -1,3 +1,97 @@
 // Place all the styles related to the Workouts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "mixins_and_variables";
+
+.card-workout {
+  height: auto;
+  width: 350px;
+  background: white;
+  box-shadow: $outShadow;
+}
+
+.form-fields {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+}
+
+.movement {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.movement-fields {
+  height: 30px;
+}
+
+.exercise {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.exercise-fields {
+  height: 50px;
+}
+
+.weight {
+  grid-area: 4 / 1 / span 1 / span 1;
+}
+
+.reps {
+  grid-area: 4 / 2 / span 1 / span 1;
+}
+
+.intensity {
+  grid-area: 4 / 3 / span 1 / span 1;
+}
+
+.remove {
+  float: right;
+  margin-bottom: 15px;
+}
+
+.form-input {
+  width: 75%;
+  height: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+#add-set {
+  position: fixed;
+  height: 8px;
+  width: 8px;
+  background-color: $blue;
+  border-radius: 50%;
+  box-shadow: $outShadow;
+  bottom: 20px;
+  left: 20px;
+  padding-top: 50px;
+  padding-left: 50px;
+  z-index: 3;
+}
+
+#finish {
+  position: fixed;
+  height: 120px;
+  width: 120px;
+  background-color: $green;
+  border-radius: 50%;
+  box-shadow: $outShadow;
+  bottom: 100px;
+  right: 20px;
+  z-index: 3;
+}
+
+#session-info {
+  color: black;
+  font-family: $headers;
+  height: auto;
+  width: auto;
+  font-size: 18pt;
+}
