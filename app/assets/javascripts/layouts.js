@@ -5,9 +5,9 @@ $(document).ready(function(){
   const navMenu = document.getElementById('nav-menu');
 
   function toggleNav() {
-    if (navMenu.style.paddingRight !== "100px"){
-      navMenu.style.paddingRight = "100px";
-    } else if (navMenu.style.paddingRight === "100px"){
+    if (navMenu.style.paddingRight !== "150px"){
+      navMenu.style.paddingRight = "150px";
+    } else if (navMenu.style.paddingRight === "150px"){
       navMenu.style.paddingRight = "0px";
     };
   };

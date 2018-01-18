@@ -1,0 +1,28 @@
+
+<div class='nested-fields form-fields'>
+  <div class="remove">
+    <%= link_to_remove_association "", f, class: "fa fa-times-circle-o fa-2x" %>
+  </div>
+
+  <div class="movement">
+    <%= f.input :movement_id, collection: Movement.order(:created_at), label_method: "pattern", input_html: {class: 'form-input pattern-fields'}, label: false %>
+  </div>
+
+  <div class="exercise">
+    <%= f.input :exercise_id, collection: Movement.order(:pattern), as: :grouped_select, group_method: :exercises, group_label_method: :pattern, input_html: {class: 'form-input exercise-fields'}, label: false %>
+  </div>
+
+  <div class="weight">
+    <%= f.input :weight, placeholder: 'Weight', input_html: {class: 'form-input weight-fields'}, label: false %>
+  </div>
+
+  <div class="reps">
+    <%= f.input :reps, placeholder: 'Reps', input_html: {class: 'form-input rep-fields'}, label: false %>
+  </div>
+
+  <div class="intensity">
+    <%= f.input :rpe, placeholder: 'RPE', input_html: {class: 'form-input intensity-fields'}, label: false %>
+  </div>
+
+
+</div>

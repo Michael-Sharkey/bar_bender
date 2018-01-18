@@ -6,9 +6,9 @@
 @import "mixins_and_variables";
 
 trix-toolbar {
-  background-color: red;
+  background-color: white;
   width: auto;
-  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 .journal-entry {
@@ -19,8 +19,8 @@ trix-toolbar {
 .note-title {
   height: 30px;
   width: 100%;
-  background-color: pink;
-  border-bottom: 1px solid black;
+  background-color: white;
+  border-bottom: 2px solid $yellow;
 }
 
 .note-contents {

@@ -3,12 +3,41 @@
   <head>
     <title>BarBender</title>
     <%= csrf_meta_tags %>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <link href="https://fonts.googleapis.com/css?family=Kanit:700" rel="stylesheet">
+    </head>
+    <body>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+        <header>
+          <h1>Bar Bender</h1><br>
+        </header>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+        <div class="notice">
+          <p id="notice"><%= notice %></p>
+        </div>
+
+
+        <main>
+          <%= yield %>
+        </main>
+
+        <div id="nav-button">
+          <i class="fa fa-power-off"></i>
+        </div>
+        <div id="nav-menu">
+            <% if signed_in? %>
+              <%= link_to "", destroy_user_session_path, method: :delete, data: {confirm: "Are you sure you want to log out?"}, class: "menu-button fa fa-eject fa-2x" %>
+
+              <%= link_to "", edit_user_path(current_user), class: "menu-button fa fa-user-circle fa-2x" %>
+              <%= link_to "", user_path(current_user), class: "menu-button fa fa-home fa-2x" %>
+              <%= link_to "", new_journal_path, class: "menu-button fa fa-sticky-note fa-2x" %>
+              <%= link_to "", new_meal_path, id: "add-meal", class: "menu-button fa fa-cutlery fa-2x" %>
+              <%= link_to "", new_workout_path, class: "menu-button fa fa-heartbeat fa-2x" %>
+            <% end %>
+        </div>
+
+
+    </body>
+  </html>

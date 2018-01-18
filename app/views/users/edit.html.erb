@@ -1,0 +1,10 @@
+<%= simple_form_for current_user do |f| %>
+<div class="card-show">
+  <%= f.input :username, placeholder: 'username', input_html: {class: 'form-input'}, label: false %>
+  <%= f.input :location, placeholder: 'location', input_html: {class: 'form-input'}, label: false %>
+  <%= f.input :age, placeholder: 'age', input_html: {class: 'form-input'}, label: false %>
+  <%= link_to "Edit Account", edit_user_registration_path(current_user) %><br>
+  <%= f.button :submit, "Edit Info" %>
+</div>
+
+<% end %>

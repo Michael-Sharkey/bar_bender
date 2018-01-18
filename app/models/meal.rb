@@ -6,6 +6,6 @@ class Meal < ApplicationRecord
   belongs_to :user
 
   def self.to_slide_info
-    order(created_at: :desc).map{|x|[x.photo.url, x.created_at.to_date, x.good]}.to_json
+    order(created_at: :desc).map{|x|[x.photo.url, x.created_at.to_date, x.healthy]}.to_json
   end
 end

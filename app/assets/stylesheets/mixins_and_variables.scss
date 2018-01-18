@@ -3,13 +3,13 @@
 @import "font-awesome";
 
 
-$red: rgb(180, 30, 6);
-$blue: rgb(15, 71, 199);
-$yellow: rgb(238, 205, 23);
-$green: rgb(27, 103, 7);
+$red: rgba(180, 30, 6, 1);
+$blue: rgba(15, 71, 199, 1);
+$yellow: rgba(238, 205, 23, 1);
+$green: rgba(27, 103, 7, 1);
 $headers: 'Kanit', sans-serif;
 $outShadow: 1px 2px 2px rgba(0, 0, 0, 0.6);
-$textShadow: 2px 2px 2px black;
+$textShadow: 1px 2px 2px rgba(0, 0, 0, 0.6);
 $buttonShadow: -1px -1px 2px black;
 
 @mixin card-basics {
@@ -20,4 +20,46 @@ $buttonShadow: -1px -1px 2px black;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  padding: 10px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+.form-input {
+  width: 75%;
+  height: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
 }
