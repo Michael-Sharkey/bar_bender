@@ -1,9 +1,5 @@
 class MealsController < ApplicationController
 
-  def index
-    @meal = Meal.first
-  end
-
 
   def slides
     @meals = current_user.meals.to_slide_info
@@ -13,8 +9,6 @@ class MealsController < ApplicationController
     end
   end
 
-  def show
-  end
 
   def new
     @meal = current_user.meals.new
@@ -33,6 +27,6 @@ class MealsController < ApplicationController
   private
 
   def meal_params
-    params.require(:meal).permit(:id, :user_id, :photo, :good, '_destroy')
+    params.require(:meal).permit(:id, :user_id, :photo, :healthy, '_destroy')
   end
 end

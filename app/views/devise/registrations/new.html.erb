@@ -1,17 +1,23 @@
-<h2>Sign up</h2>
+<div class="card-show">
+  <h3>Life if not worth living if one cannot deadlift</h3>
+  <h5>-Jon Pall Sigmarsson</h5>
+</div>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+<div class="card-show">
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
-  </div>
+    <div class="form-inputs">
+      <%= f.input :email, placeholder: "Email", input_html: {class: "form-input"}, required: true, autofocus: true, label: false %>
+      <%= f.input :password, placeholder: "Password: minimum of 6 characters", input_html: {class: "form-input"}, required: true, label: false %>
+      <%= f.input :password_confirmation, placeholder: "Confirm Password", input_html: {class: "form-input"}, required: true, label: false %>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up" %>
+    </div>
+  <% end %>
+</div>
+<div class="card-show">
+  <%= render "devise/shared/links" %>
+</div>

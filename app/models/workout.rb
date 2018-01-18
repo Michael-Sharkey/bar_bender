@@ -6,9 +6,6 @@ class Workout < ApplicationRecord
   has_many :movements, through: :worksets
   accepts_nested_attributes_for :worksets, allow_destroy: true
 
-  before_save do |workout|
-    workout.date.iso8601
-  end
 
   # methods
   def self.most_recent(integer)

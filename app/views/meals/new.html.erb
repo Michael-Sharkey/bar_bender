@@ -1,5 +1,22 @@
-<h1>New Meal</h1>
+<div id="meal-modal">
+  <%= simple_form_for @meal, url: meals_path do |m| %>
 
-<%= render 'form', meal: @meal %>
-
-<%= link_to 'Back', meals_path %>
+  <% if @meal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meal.errors.count, "error") %> prohibited this meal from being saved:</h2>
+      <ul>
+      <% @meal.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+      <i class="fa fa-camera fa-2x" id="meal-photo"></i>
+      <%= m.input :photo, as: :file, input_html: {id: "file-button", hidden: true}, label: false %>
+      <span>
+        <h3>Is this good for you?</h3>
+        <%= m.input :healthy, as: :boolean, input_html: {class: "checkbox"}, label: false %>
+      </span>
+      <%= m.button :submit, input_html: {class: "fa fa-plus-circle fa-2x"}, label: false %>
+  <% end %>
+</div>

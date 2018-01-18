@@ -94,10 +94,6 @@ $(document).ready(function(){
     } return currentSlide;
   };
 
-  function plusMinus(){
-    console.log(currentSlide);
-  };
-
   nextMeal.addEventListener('click', nxtMeal);
   prevMeal.addEventListener('click', prvMeal);
 

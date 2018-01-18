@@ -54,38 +54,31 @@
   margin-bottom: 15px;
 }
 
-.form-input {
-  width: 75%;
-  height: 25px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 4px;
-}
 
-#add-set {
+
+
+.fa-plus {
   position: fixed;
-  height: 8px;
-  width: 8px;
-  background-color: $blue;
-  border-radius: 50%;
-  box-shadow: $outShadow;
-  bottom: 20px;
-  left: 20px;
+  height: 50px;
+  width: 50px;
+  color: $blue;
+  text-shadow: $outShadow;
+  bottom: 65px;
+  right: 150px;
   padding-top: 50px;
   padding-left: 50px;
-  z-index: 3;
+  z-index: 20;
 }
 
-#finish {
+.fa-check {
   position: fixed;
-  height: 120px;
-  width: 120px;
-  background-color: $green;
-  border-radius: 50%;
-  box-shadow: $outShadow;
-  bottom: 100px;
-  right: 20px;
-  z-index: 3;
+  height: 50px;
+  width: 50px;
+  color: $green;
+  text-shadow: $outShadow;
+  bottom: 85px;
+  right: 40px;
+  z-index: 20;
 }
 
 #session-info {
@@ -94,4 +87,8 @@
   height: auto;
   width: auto;
   font-size: 18pt;
+}
+
+.fa-times-circle-o {
+  color: $red;
 }
