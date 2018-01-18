@@ -1,3 +1,63 @@
 // Place all the styles related to the Meals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "mixins_and_variables";
+
+
+#meal-carousel {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
+#current {
+  grid-area: 1 / 1 / span 10 / span 20;
+  z-index: 0;
+}
+
+#overlay {
+  grid-area: 1 / 1 / span 10 / span 20;
+  z-index: 1;
+  background-color: none;
+  opacity: 0.4;
+}
+
+.meal-pics {
+  height: 100%;
+  width: 100%;
+}
+
+.date-box {
+  font-family: $headers;
+  font-size: 12px;
+  color: white;
+  opacity: 0.5;
+  grid-area: 8 / 8 / span 1 / span 4;
+}
+
+.fa-chevron-right {
+  transition: 0.6s ease;
+  grid-area: 6 / 20 / span 1 / span 1;
+  z-index: 1;
+  color: rgba(1,1,1,0.3);
+
+  &:hover {
+    color: rgba(1,1,1,0.8);
+  }
+}
+
+.fa-chevron-left {
+  transition: 0.6s ease;
+  grid-area: 6 / 1 / span 1 / span 1;
+  z-index: 2;
+  color: rgba(1,1,1,0.3);
+
+  &:hover {
+    color: rgba(1,1,1,0.8);
+  }
+}
