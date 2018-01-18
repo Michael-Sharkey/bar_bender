@@ -12,5 +12,10 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
+//= require trix
+//= require jquery3
+//= require momentjs
+//= require chartjs
+//= require cocoon
+//= require select2
 //= require_tree .

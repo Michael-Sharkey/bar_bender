@@ -3,6 +3,21 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.2'
 
+# Additional Gems
+gem 'jquery-rails'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem 'devise'
+gem 'trix'
+gem 'simple_form'
+gem "cocoon"
+gem 'font-awesome-sass'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-chartjs'
+  gem 'rails-assets-momentjs'
+  gem 'rails-assets-select2'
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0.beta2'
 # Use postgresql as the database for Active Record
