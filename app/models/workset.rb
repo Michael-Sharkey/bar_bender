@@ -1,0 +1,2 @@
+class Workset < ApplicationRecord
+end
