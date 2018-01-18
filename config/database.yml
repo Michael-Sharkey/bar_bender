@@ -82,4 +82,4 @@ production:
   <<: *default
   database: bar_bender_production
   username: mike
-  password: <%= ENV['BAR_BENDER_DATABASE_PASSWORD'] %>
+  password: 

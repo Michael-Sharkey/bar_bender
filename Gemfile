@@ -12,6 +12,7 @@ gem 'simple_form'
 gem "cocoon"
 gem 'font-awesome-sass'
 
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-chartjs'
   gem 'rails-assets-momentjs'
