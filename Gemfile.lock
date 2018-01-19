@@ -155,6 +155,7 @@ GEM
       railties (= 5.2.0.beta2)
       sprockets-rails (>= 2.0.0)
     rails-assets-chartjs (2.7.1)
+    rails-assets-hopscotch (0.3.1)
     rails-assets-momentjs (2.20.1)
     rails-assets-select2 (4.0.5)
     rails-dom-testing (2.0.3)
@@ -251,6 +252,7 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.0.beta2)
   rails-assets-chartjs!
+  rails-assets-hopscotch!
   rails-assets-momentjs!
   rails-assets-select2!
   sass-rails (~> 5.0)

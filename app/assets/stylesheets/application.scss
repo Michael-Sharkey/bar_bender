@@ -13,11 +13,10 @@
  *= require_tree .
  *= require_self
  *= require trix
+  *= require hopscotch
  *= require select2
  */
 
  @import "font-awesome-sprockets";
  @import "font-awesome";
  @import "mixins_and_variables";
-
- 

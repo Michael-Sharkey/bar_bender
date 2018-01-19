@@ -17,6 +17,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-chartjs'
   gem 'rails-assets-momentjs'
   gem 'rails-assets-select2'
+  gem 'rails-assets-hopscotch'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

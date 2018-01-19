@@ -16,6 +16,7 @@
 //= require jquery3
 //= require momentjs
 //= require chartjs
+//= require hopscotch
 //= require cocoon
 //= require select2
 //= require_tree .
