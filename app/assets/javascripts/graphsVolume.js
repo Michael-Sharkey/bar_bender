@@ -64,7 +64,7 @@ function drawPolar(data) {
           display: true,
           position: 'bottom'
         }
-      },
+      }
   });
 };
 

@@ -53,28 +53,28 @@ $(document).ready(function(){
           label: 'Bench Press',
           borderColor: 'rgba(180, 30, 6, 1)',
           backgroundColor: 'rgba(180, 30, 6, 0.4)',
-          hoverRadius: 6,
+          hoverRadius: 2,
           data: dailyMaxes[0]
         },
         {
           label: 'Overhead Press',
           borderColor: 'rgba(15, 71, 199, 1)',
           backgroundColor: 'rgba(15, 71, 199, 0.4)',
-          hoverRadius: 6,
+          hoverRadius: 2,
           data: dailyMaxes[1]
         },
         {
           label: 'Squat',
           borderColor: 'rgba(238, 205, 23, 1)',
           backgroundColor: 'rgba(238, 205, 23, 0.4)',
-          hoverRadius: 6,
+          hoverRadius: 2,
           data: dailyMaxes[2]
         },
         {
           label: 'Deadlift',
           borderColor: 'rgba(27, 103, 7, 1)',
           backgroundColor: 'rgba(27, 103, 7, 0.4)',
-          hoverRadius: 6,
+          hoverRadius: 2,
           data: dailyMaxes[3]
         }
       ],

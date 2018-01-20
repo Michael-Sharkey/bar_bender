@@ -68,8 +68,8 @@ header {
   #header-overlay {
     grid-area: 1 / 1 / span 9 / span 9;
     z-index: 2;
-    background: linear-gradient(to left, rgba(0,27,90,0), rgba(0,27,90,1));
-    opacity: 0.5;
+    background: linear-gradient(to right, rgba(0,27,90,0.8), rgba(0,27,90,1));
+    opacity: 0.8;
   }
 }
 
@@ -85,13 +85,15 @@ main {
 
 #nav-button {
   position: fixed;
-  height: 50px;
-  width: 50px;
-  background-color: $red;
+  height: 75px;
+  width: 75px;
+  background-image: url('nav-button.png');
+  background-position: center;
+  background-size: cover;
   border-radius: 50%;
   box-shadow: $outShadow;
-  bottom: 20px;
-  right: 40px;
+  bottom: 15px;
+  right: 15px;
   padding-top: 50px;
   padding-left: 50px;
   z-index: 20;
