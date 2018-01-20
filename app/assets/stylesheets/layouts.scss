@@ -27,25 +27,49 @@ body {
 }
 
 .notice {
-  grid-area: notice;
+  grid-area: "notice";
   display: block;
 }
 
 
 header {
-  grid-area: header;
-  background: $red;
-  display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 30px;
+  grid-area: "header";
+  height: 350px;
+  background-image: url("hero.jpg");
   box-shadow: $outShadow;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(9, 1fr);
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 10px;
 
   h1 {
-    float: left;
-    font-family: $headers;
+    font-family: serif;
     color: white;
-    text-shadow: $textShadow;
+    font-size: 4em;
+  }
+
+  h2 {
+    font-family: sans-serif;
+    color: white;
+    font-size: 1em;
+  }
+
+  .header-text {
+    grid-area: 2 / 3 / span 3 / span 5;
+    z-index: 3;
+    text-align: center;
+  }
+
+
+  #header-overlay {
+    grid-area: 1 / 1 / span 9 / span 9;
+    z-index: 2;
+    background: linear-gradient(to left, rgba(0,27,90,0), rgba(0,27,90,1));
+    opacity: 0.5;
   }
 }
 
