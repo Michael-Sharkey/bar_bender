@@ -27,19 +27,20 @@
       <%= yield %>
     </main>
 
-    <div id="nav-button">
-    </div>
-    <div id="nav-menu">
-      <% if signed_in? %>
-        <%= link_to "", destroy_user_session_path, method: :delete, data: {confirm: "Are you sure you want to log out?"}, class: "menu-button fa fa-eject fa-2x" %>
 
-        <%= link_to "", edit_user_path(current_user), class: "menu-button fa fa-user-circle fa-2x" %>
-        <%= link_to "", user_path(current_user), class: "menu-button fa fa-home fa-2x" %>
-        <%= link_to "", new_journal_path, class: "menu-button fa fa-sticky-note fa-2x" %>
-        <%= link_to "", new_meal_path, id: "add-meal", class: "menu-button fa fa-cutlery fa-2x" %>
-        <%= link_to "", new_workout_path, class: "menu-button fa fa-heartbeat fa-2x" %>
-      <% end %>
-    </div>
+    <div id="nav-menu">
+        <div id="nav-icons">
+          <% if signed_in? %>
+            <%= link_to "", destroy_user_session_path, method: :delete, data: {confirm: "Are you sure you want to log out?"}, class: "menu-button fa fa-sign-out fa-2x" %>
+            <%= link_to "", edit_user_path(current_user), class: "menu-button fa fa-user-circle fa-2x" %>
+            <%= link_to "", user_path(current_user), class: "menu-button fa fa-home fa-2x" %>
+            <%= link_to "", new_journal_path, class: "menu-button fa fa-sticky-note fa-2x" %>
+            <%= link_to "", new_meal_path, id: "add-meal", class: "menu-button fa fa-cutlery fa-2x" %>
+            <%= link_to "", new_workout_path, class: "menu-button fa fa-heartbeat fa-2x" %>
+          <% end %>
+        </div>
+        <div id="nav-button"></div>
+      </div>
 
   </body>
 </html>
