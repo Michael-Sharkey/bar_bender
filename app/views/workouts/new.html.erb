@@ -1,6 +1,6 @@
 
   <%= simple_form_for @workout do |f| %>
-<div class="card-workout">
+<div class="card">
   <% if @workout.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@workout.errors.count, "error") %> prohibited this workout from being saved:</h2>
@@ -11,17 +11,20 @@
       </ul>
     </div>
   <% end %>
-
+<div class="card-grid">
   <%= f.input :date, as: :date, input_html: {id: 'session-info'}, html5: true, label: false %>
     <%= f.simple_fields_for :worksets do |workset| %>
       <%= render 'workset_fields', f: workset %>
     <% end %>
 
     <div class="links">
-      <%= link_to_add_association '', f, :worksets, class: "fa fa-plus fa-3x" %>
+      <%= link_to_add_association '', f, :worksets, id: "add-set" %>
     </div>
-      <span id="finish-button" class="fa fa-check fa-3x"></span>
-      <%= f.button :submit, "", id: "finish", hidden: true, label: false %>
-
+      <div id="finish"></div>
+      <%= f.button :submit, "", id: "finish-hidden", hidden: true, label: false %>
 </div>
+</div>
+
+<div id="workout-menu"></div>
+
 <% end %>

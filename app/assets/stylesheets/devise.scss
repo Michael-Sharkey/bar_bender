@@ -2,9 +2,6 @@
 @import "font-awesome";
 @import "mixins_and_variables";
 
-.card-show {
-  @include card-basics;
-}
 
 h2 {
   font-family: $headers;

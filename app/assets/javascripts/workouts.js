@@ -1,13 +1,17 @@
 $(document).ready(function(){
 
-  const submit = document.getElementById('finish');
-  const finishButton = document.getElementById('finish-button');
+  const submit = document.getElementById('finish-hidden');
+  const finishButton = document.getElementById('finish');
+
   function endWorkout() {
     submit.click();
   };
 
+  window.addEventListener('load', function(){
+    navButton.classList.add('hidden');
+  })
+
   finishButton.addEventListener('click', function(){
-    console.log('test');
     endWorkout();
   });
 

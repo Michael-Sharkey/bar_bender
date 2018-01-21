@@ -5,11 +5,31 @@
 @import "font-awesome";
 @import "mixins_and_variables";
 
-.card-workout {
-  height: auto;
-  width: 350px;
-  background: white;
-  box-shadow: $outShadow;
+#workout-menu {
+  height: 105px;
+  width: 100%;
+  position: fixed;
+  display: inline;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(0,0,0,0.8);
+  transition: 0.5s;
+  z-index: 10;
+}
+
+#add-set {
+  @include button-basics;
+  background-image: url('add-set.png');
+  bottom: 15px;
+  left: 42%;
+}
+
+#finish {
+  @include button-basics;
+  background-image: url('finish.png');
+  z-index: 20;
+  bottom: 15px;
+  left: 5%;
 }
 
 .form-fields {
@@ -54,32 +74,6 @@
   margin-bottom: 15px;
 }
 
-
-
-
-.fa-plus {
-  position: fixed;
-  height: 50px;
-  width: 50px;
-  color: $blue;
-  text-shadow: $outShadow;
-  bottom: 65px;
-  right: 150px;
-  padding-top: 50px;
-  padding-left: 50px;
-  z-index: 20;
-}
-
-.fa-check {
-  position: fixed;
-  height: 50px;
-  width: 50px;
-  color: $green;
-  text-shadow: $outShadow;
-  bottom: 85px;
-  right: 40px;
-  z-index: 20;
-}
 
 #session-info {
   color: black;
