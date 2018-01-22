@@ -18,11 +18,11 @@ class ToursController < ApplicationController
   end
 
   def workout
+    @workout = User.first.workouts.new
   end
 
   def eat
+    @meal = User.first.meals.new
   end
 
-  def note
-  end
 end

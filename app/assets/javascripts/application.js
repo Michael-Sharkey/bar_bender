@@ -12,7 +12,6 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require trix
 //= require jquery3
 //= require momentjs
 //= require chartjs
