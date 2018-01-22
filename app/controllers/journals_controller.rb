@@ -2,10 +2,6 @@ class JournalsController < ApplicationController
   def index
   end
 
-  def show
-    @journal = Journal.find_by_id(params[:id])
-  end
-
   def new
     @journal = current_user.journals.new
   end

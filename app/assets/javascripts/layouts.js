@@ -12,5 +12,7 @@ $(document).ready(function(){
     };
   };
 
+  
+
   navButton.addEventListener('click', toggleNav);
 })

@@ -1,0 +1,24 @@
+<%= simple_form_for @meal, url: meals_path do |m| %>
+
+<div id="meal-card" class="card">
+    <% if @meal.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@meal.errors.count, "error") %> prohibited this meal from being saved:</h2>
+        <ul>
+        <% @meal.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+        <i class="fa fa-camera fa-3x" id="meal-photo"></i><br>
+        <%= m.input :photo, as: :file, input_html: {id: "file-button", hidden: true}, label: false %>
+        <h3>Healthy?</h3>
+        <i class="fa fa-thumbs-up fa-2x"></i>
+        <%= m.input :healthy, as: :boolean, input_html: {id: "healthy-boolean", hidden: true}, label: false %>
+
+        <div id="eat-button"></div>
+        <%= m.button :submit, "Submit", id: "meal-submit", class: "hidden", label: false %>
+  </div>
+</div>
+<% end %>

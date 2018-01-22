@@ -8,7 +8,7 @@ $(document).ready(function(){
   $.ajax({
     type: 'GET',
     contentType: 'application/json; charset=utf-8',
-    url: '../meals/slides',
+    url: '../../tours/slides',
     dataType: 'json',
     success: function(data) {
       buildSlides(data);

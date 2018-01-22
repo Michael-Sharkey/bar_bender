@@ -3,7 +3,7 @@ $(document).ready(function(){
   $.ajax({
     type: 'GET',
     contentType: 'application/json; charset=utf-8',
-    url: '../graphs/intensity',
+    url: '../../graphs/intensity',
     dataType: 'json',
     success: function(data) {
       drawBubble(data);
@@ -18,7 +18,6 @@ $(document).ready(function(){
   }
 
   function drawBubble(data) {
-    console.log(data);
     function DataPoint(x, y, r){
       this.x = moment(x, "YYY-MM-DD hh:mm:ss").format("MM-DD-YY");
       this.y = y;
