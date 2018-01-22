@@ -14,7 +14,7 @@ class JournalsController < ApplicationController
     @journal = current_user.journals.new(journal_params)
     @journal.user_id = current_user.id
     if @journal.save
-      redirect_to @journal, notice: 'Success!'
+      redirect_to current_user, notice: 'Success!'
     else
       render 'new', notice: 'Something Went Wrong'
     end

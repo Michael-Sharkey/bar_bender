@@ -5,19 +5,36 @@
 @import "font-awesome";
 @import "mixins_and_variables";
 
+#journal-grid {
+  display: block;
+  margin: 5px;
+  text-align: left;
+}
+
+.new-note {
+  width: 100%;
+}
+
 trix-toolbar {
+  margin-top: 10px;
   background-color: white;
   width: auto;
-  overflow-y: scroll;
+  overflow-x: scroll;
 }
 
 .journal-entry {
   width: 100%;
-  padding: 5px;
+}
+
+.fa-pencil {
+  text-align: center;
+  margin-top: 10px;
+  float: right;
 }
 
 .note-title {
-  height: 30px;
+  height: auto;
+  margin-bottom: 5px;
   width: 100%;
   background-color: white;
   border-bottom: 2px solid $yellow;
@@ -26,6 +43,7 @@ trix-toolbar {
 .note-contents {
   height: auto;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 #note-accordion {
