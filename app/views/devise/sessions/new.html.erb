@@ -1,13 +1,12 @@
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
 <div class="card">
   <h3>Because cardio is boring.</h3>
-</div>
 
 
-<div class="card-show">
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-inputs">
-      <%= f.input :email, placeholder: "Email (Guest login: guest@test.com)", input_html: {class: "form-input"}, required: false, autofocus: true, label: false %>
-      <%= f.input :password, placeholder: "Password (Guest login: 123456)", input_html: {class: "form-input"}, required: false, label: false %>
+      <%= f.input :email, placeholder: "Email", input_html: {class: "form-input"}, autofocus: true, label: false %>
+      <%= f.input :password, placeholder: "Password", input_html: {class: "form-input"}, label: false %>
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
 
@@ -15,8 +14,6 @@
       <%= f.button :submit, "Log in" %>
     </div>
   <% end %>
-</div>
-<div class="card-show">
   <%= render "devise/shared/links" %>
 
 </div>
