@@ -12,8 +12,6 @@ class User < ApplicationRecord
   has_many :exercises, through: :worksets
   has_many :movements, through: :worksets
   has_many :meals, inverse_of: :user, dependent: :destroy
-  has_many :journals, inverse_of: :user, dependent: :destroy
   accepts_nested_attributes_for :workouts, allow_destroy: true
-  accepts_nested_attributes_for :journals, allow_destroy: true
 
 end

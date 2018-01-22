@@ -12,7 +12,6 @@ Rails.application.routes.draw do
 
   get'meals/slides'
   resources :meals
-  resources :journals
 
   get 'tours/show'
   get 'tours/workout'
