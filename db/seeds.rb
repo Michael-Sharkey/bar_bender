@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create(email: 'guest@test.com', password: "123456", username: "Peter Powerlifter", location: "Philadelphia", age: "30")
-User.create(email: 'abc@123.com', password: "123456", username: "Bobby Bodybuilder", location: "California", age: "20")
 
 Movement.create(pattern: "Push")
 Movement.create(pattern: "Pull")
@@ -33,12 +32,6 @@ Workout.create(user_id: 1, date: '010/02/2018')
 Workout.create(user_id: 1, date: '013/02/2018')
 Workout.create(user_id: 1, date: '016/02/2018')
 
-Workout.create(user_id: 2, date: '02/02/2018')
-Workout.create(user_id: 2, date: '04/02/2018')
-Workout.create(user_id: 2, date: '06/02/2018')
-Workout.create(user_id: 2, date: '08/02/2018')
-Workout.create(user_id: 2, date: '10/02/2018')
-Workout.create(user_id: 2, date: '08/02/2018')
 
 3.times { Workset.create(workout_id: 1, movement_id: "1", exercise_id: 2, weight: 95, reps: 8, rpe: 8, daily_max: false) }
 Workset.create(workout_id: 1, movement_id: "1", exercise_id: 2, weight: 135, reps: 7, rpe: 9, daily_max: true)
@@ -87,49 +80,3 @@ Workset.create(workout_id: 6, movement_id: "2", exercise_id: 3, weight: 225, rep
 3.times { Workset.create(workout_id: 6, movement_id: "5", exercise_id: 9, weight: 0, reps: 7, rpe: 8, daily_max: false) }
 3.times { Workset.create(workout_id: 6, movement_id: "4", exercise_id: 7, weight: 365, reps: 5, rpe: 8, daily_max: false) }
 Workset.create(workout_id: 6, movement_id: "3", exercise_id: 7, weight: 415, reps: 3, rpe: 10, daily_max: true)
-
-3.times { Workset.create(workout_id: 7, movement_id: "1", exercise_id: 1, weight: 135, reps: 12, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 7, movement_id: "1", exercise_id: 1, weight: 185, reps: 3, rpe: 10, daily_max: true)
-3.times { Workset.create(workout_id: 7, movement_id: "1", exercise_id: 1, weight: 95, reps: 12, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 7, movement_id: "1", exercise_id: 1, weight: 134, reps: 1, rpe: 9, daily_max: true)
-3.times { Workset.create(workout_id: 7, movement_id: "1", exercise_id: 1, weight: 50, reps: 10, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 7, movement_id: "1", exercise_id: 1, weight: 55, reps: 8, rpe: 8, daily_max: true)
-
-3.times { Workset.create(workout_id: 8, movement_id: "2", exercise_id: 11, weight: 50, reps: 12, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 8, movement_id: "2", exercise_id: 11, weight: 60, reps: 3, rpe: 10, daily_max: true)
-3.times { Workset.create(workout_id: 8, movement_id: "2", exercise_id: 11, weight: 40, reps: 12, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 8, movement_id: "2", exercise_id: 11, weight: 40, reps: 1, rpe: 9, daily_max: true)
-3.times { Workset.create(workout_id: 8, movement_id: "2", exercise_id: 11, weight: 30, reps: 10, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 8, movement_id: "2", exercise_id: 11, weight: 20, reps: 8, rpe: 8, daily_max: true)
-
-3.times { Workset.create(workout_id: 9, movement_id: "1", exercise_id: 1, weight: 135, reps: 12, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 9, movement_id: "1", exercise_id: 1, weight: 185, reps: 3, rpe: 10, daily_max: true)
-3.times { Workset.create(workout_id: 9, movement_id: "1", exercise_id: 1, weight: 95, reps: 12, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 9, movement_id: "1", exercise_id: 1, weight: 134, reps: 1, rpe: 9, daily_max: true)
-3.times { Workset.create(workout_id: 9, movement_id: "1", exercise_id: 1, weight: 50, reps: 10, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 9, movement_id: "1", exercise_id: 1, weight: 55, reps: 8, rpe: 8, daily_max: true)
-
-3.times { Workset.create(workout_id: 10, movement_id: "2", exercise_id: 11, weight: 50, reps: 12, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 10, movement_id: "2", exercise_id: 11, weight: 60, reps: 3, rpe: 10, daily_max: true)
-3.times { Workset.create(workout_id: 10, movement_id: "2", exercise_id: 11, weight: 40, reps: 12, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 10, movement_id: "2", exercise_id: 11, weight: 40, reps: 1, rpe: 9, daily_max: true)
-3.times { Workset.create(workout_id: 10, movement_id: "2", exercise_id: 11, weight: 30, reps: 10, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 10, movement_id: "2", exercise_id: 11, weight: 20, reps: 8, rpe: 8, daily_max: true)
-
-3.times { Workset.create(workout_id: 11, movement_id: "1", exercise_id: 1, weight: 135, reps: 12, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 11, movement_id: "1", exercise_id: 1, weight: 185, reps: 3, rpe: 10, daily_max: true)
-3.times { Workset.create(workout_id: 11, movement_id: "1", exercise_id: 1, weight: 95, reps: 12, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 11, movement_id: "1", exercise_id: 1, weight: 134, reps: 1, rpe: 9, daily_max: true)
-3.times { Workset.create(workout_id: 11, movement_id: "1", exercise_id: 1, weight: 50, reps: 10, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 11, movement_id: "1", exercise_id: 1, weight: 55, reps: 8, rpe: 8, daily_max: true)
-
-3.times { Workset.create(workout_id: 12, movement_id: "2", exercise_id: 11, weight: 50, reps: 12, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 12, movement_id: "2", exercise_id: 11, weight: 60, reps: 3, rpe: 10, daily_max: true)
-3.times { Workset.create(workout_id: 12, movement_id: "2", exercise_id: 11, weight: 40, reps: 12, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 12, movement_id: "2", exercise_id: 11, weight: 40, reps: 1, rpe: 9, daily_max: true)
-3.times { Workset.create(workout_id: 12, movement_id: "2", exercise_id: 11, weight: 30, reps: 10, rpe: 8, daily_max: false) }
-Workset.create(workout_id: 12, movement_id: "2", exercise_id: 11, weight: 20, reps: 8, rpe: 8, daily_max: true)
-
-
-10.times {Journal.create(user_id: 1, title: 'Test Post User 1', entry: "<div><strong>This is a dummy post for seed data purposes.<br></strong><em>This is a dummy post for seed data purposes.<br></em><del>This is a dummy post for seed data purposes.</del></div><ul><li>This is a dummy post for seed data purposes.</li></ul><blockquote>This is a dummy post for seed data purposes.</blockquote><ol><li>This is a dummy post for seed data purposes.</li></ol>") }
-10.times {Journal.create(user_id: 2, title: 'Test Post User 2', entry: "<div><strong>This is a dummy post for seed data purposes.<br></strong><em>This is a dummy post for seed data purposes.<br></em><del>This is a dummy post for seed data purposes.</del></div><ul><li>This is a dummy post for seed data purposes.</li></ul><blockquote>This is a dummy post for seed data purposes.</blockquote><ol><li>This is a dummy post for seed data purposes.</li></ol>") }

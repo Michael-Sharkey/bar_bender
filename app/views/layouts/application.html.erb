@@ -35,14 +35,12 @@
             <%= link_to "", destroy_user_session_path, method: :delete, data: {confirm: "Are you sure you want to log out?"}, class: "menu-button fa fa-sign-out fa-2x" %>
             <%= link_to "", edit_user_path(current_user), class: "menu-button fa fa-user-circle fa-2x" %>
             <%= link_to "", user_path(current_user), class: "menu-button fa fa-home fa-2x" %>
-            <%= link_to "", new_journal_path, class: "menu-button fa fa-pencil fa-2x" %>
             <%= link_to "", new_meal_path, id: "add-meal", class: "menu-button fa fa-cutlery fa-2x" %>
             <%= link_to "", new_workout_path, class: "menu-button fa fa-heartbeat fa-2x" %>
             <% else %>
             <%= link_to "", new_user_registration_path, class: "menu-button fa fa-sign-in fa-2x" %>
             <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
             <i class="fa fa-home fa-2x" aria-hidden="true"></i>
-            <i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
             <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
             <i class="fa fa-heartbeat fa-2x" aria-hidden="true"></i>
           <% end %>

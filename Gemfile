@@ -7,7 +7,6 @@ ruby '2.4.2'
 gem 'jquery-rails'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'devise'
-gem 'trix'
 gem 'simple_form'
 gem "cocoon"
 gem 'font-awesome-sass'
