@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <%= favicon_link_tag 'nav-button.png' %>
-    <link href="https://fonts.googleapis.com/css?family=Kanit:700" rel="stylesheet">
-
+    <%= favicon_link_tag 'favicon.png' %>
   </head>
   <body>
 
@@ -32,21 +30,24 @@
     <div id="nav-menu">
         <div id="nav-icons">
           <% if signed_in? %>
+          <div id="nav-button"></div>
+            <%= link_to "", user_path(current_user), class: "menu-button fa fa-home fa-2x" %>
             <%= link_to "", destroy_user_session_path, method: :delete, data: {confirm: "Are you sure you want to log out?"}, class: "menu-button fa fa-sign-out fa-2x" %>
             <%= link_to "", edit_user_path(current_user), class: "menu-button fa fa-user-circle fa-2x" %>
-            <%= link_to "", user_path(current_user), class: "menu-button fa fa-home fa-2x" %>
             <%= link_to "", new_meal_path, id: "add-meal", class: "menu-button fa fa-cutlery fa-2x" %>
             <%= link_to "", new_workout_path, class: "menu-button fa fa-heartbeat fa-2x" %>
             <% else %>
-            <%= link_to "", new_user_registration_path, class: "menu-button fa fa-sign-in fa-2x" %>
-            <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
-            <i class="fa fa-home fa-2x" aria-hidden="true"></i>
-            <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
-            <i class="fa fa-heartbeat fa-2x" aria-hidden="true"></i>
+            <%= link_to "", new_user_registration_path, id: "tour-sign-up", class: "menu-button fa fa-user-plus fa-2x" %>
+            <i id="tour-home" class="fa fa-home fa-2x" aria-hidden="true"></i>
+            <i id="tour-info" class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+            <i id="tour-logout" class="fa  fa-sign-out fa-2x" aria-hidden="true"></i>
+            <i id="tour-add-meal" class="fa  fa-cutlery fa-2x" aria-hidden="true"></i>
+            <i id="tour-workout" class="fa  fa-heartbeat fa-2x" aria-hidden="true"></i>
           <% end %>
         </div>
-        <div id="nav-button"></div>
       </div>
+
+
 
   </body>
 </html>

@@ -21,3 +21,54 @@
     grid-area: auto;
   }
 }
+
+#nav-button-tour {
+  @include button-basics;
+  background-image: url('nav-button.png');
+  bottom: 15px;
+  right: 30px;
+}
+
+#tour-eat-button {
+  height: 75px;
+  width: 75px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: $outShadow;
+  background-image: url('eat-button.png');
+  margin: 2em auto;
+}
+
+#tour-meal-photo {
+text-align: center;
+}
+
+.fa-thumbs-up {
+  color: rgba(0,0,0,0.4);
+  text-align: center;
+  &:hover {
+    color: green;
+  }
+}
+
+.activated{
+  color: green;
+}
+
+#tour-button {
+  @include button-basics;
+  z-index: 3;
+  height: 200px;
+  width: 200px;
+  opacity: .5;
+  background-image: url('tour.png');
+  right: 25px;
+  top: 15px;
+
+  &:hover {
+    opacity: 1;
+    box-shadow: 5px 5px 5px $yellow;
+  }
+
+}

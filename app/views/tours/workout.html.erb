@@ -1,2 +1,30 @@
-<h1>Tours#workout</h1>
-<p>Find me in app/views/tours/workout.html.erb</p>
+
+  <%= simple_form_for @workout do |f| %>
+<div class="card">
+  <% if @workout.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@workout.errors.count, "error") %> prohibited this workout from being saved:</h2>
+      <ul>
+      <% @workout.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="card-grid">
+  <%= f.input :date, as: :date, input_html: {id: 'session-info'}, html5: true, label: false %>
+    <%= f.simple_fields_for :worksets do |workset| %>
+      <%= render 'workset_fields', f: workset %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association '', f, :worksets, id: "add-set" %>
+    </div>
+      <div id="finish"></div>
+      <%= f.button :submit, "", id: "finish-hidden", hidden: true, label: false %>
+</div>
+</div>
+
+<div id="workout-menu"></div>
+
+<% end %>

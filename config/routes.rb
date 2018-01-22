@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   get 'tours/eat'
   get 'tours/note'
   get 'tours/slides'
-  get 'tours/notes'
 
   root to: 'users#show'
 end

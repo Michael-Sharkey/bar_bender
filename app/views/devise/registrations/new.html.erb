@@ -1,10 +1,7 @@
-<div class="card">
-  <h3>Life if not worth living if one cannot deadlift</h3>
-  <h5>-Jon Pall Sigmarsson</h5>
-</div>
 
-<div class="card-show">
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+<div class="card">
     <%= f.error_notification %>
 
     <div class="form-inputs">
@@ -16,8 +13,9 @@
     <div class="form-actions">
       <%= f.button :submit, "Sign up" %>
     </div>
-  <% end %>
-</div>
-<div class="card-show">
+
   <%= render "devise/shared/links" %>
+  <%= link_to "Demo Mode", tours_show_path %>
+
 </div>
+<% end %>
