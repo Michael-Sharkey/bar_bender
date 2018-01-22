@@ -8,6 +8,7 @@
     <%= javascript_include_tag 'application' %>
     <%= favicon_link_tag 'nav-button.png' %>
     <link href="https://fonts.googleapis.com/css?family=Kanit:700" rel="stylesheet">
+
   </head>
   <body>
 
@@ -37,6 +38,13 @@
             <%= link_to "", new_journal_path, class: "menu-button fa fa-pencil fa-2x" %>
             <%= link_to "", new_meal_path, id: "add-meal", class: "menu-button fa fa-cutlery fa-2x" %>
             <%= link_to "", new_workout_path, class: "menu-button fa fa-heartbeat fa-2x" %>
+            <% else %>
+            <%= link_to "", new_user_registration_path, class: "menu-button fa fa-sign-in fa-2x" %>
+            <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-heartbeat fa-2x" aria-hidden="true"></i>
           <% end %>
         </div>
         <div id="nav-button"></div>

@@ -1,0 +1,23 @@
+// Place all the styles related to the Tours controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "mixins_and_variables";
+
+#nav-icons {
+  height: 80%;
+  width: 100%;
+  display: grid;
+  grid-auto-rows: minmax(auto, 1fr);
+  grid-gap: 10px;
+  margin-left: 65px;
+  margin-top: 15px;
+
+  .fa {
+    color: $yellow;
+    text-shadow: $textShadow;
+    z-index: 11;
+    grid-area: auto;
+  }
+}

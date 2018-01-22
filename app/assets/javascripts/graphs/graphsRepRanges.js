@@ -3,7 +3,7 @@ $(document).ready(function(){
   $.ajax({
     type: 'GET',
     contentType: 'application/json; charset=utf-8',
-    url: '../graphs/rep_ranges',
+    url: '../../graphs/rep_ranges',
     dataType: 'json',
     success: function(data) {
       drawRadar(data);
@@ -50,7 +50,7 @@ $(document).ready(function(){
     var splitHinge = repRanges(hingeReps);
     var splitCore = repRanges(coreReps);
 
-    var ctx = document.getElementById("rep-ranges");
+    var ctx = document.getElementById("repRanges");
     var radar = new Chart(ctx, {
       type: 'radar',
       data: {

@@ -6,16 +6,7 @@
   box-sizing: border-box;
 }
 
-a:active,
-a:hover,
-a:link,
-a:visited {
-  text-decoration: none;
-}
 
-.hidden {
-  display: none;
-}
 
 body {
   background-color: white;
@@ -87,7 +78,7 @@ main {
   @include button-basics;
   background-image: url('nav-button.png');
   bottom: 15px;
-  right: 5%;
+  right: 30px;
 }
 
 #nav-menu {

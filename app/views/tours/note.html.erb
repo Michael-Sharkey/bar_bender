@@ -1,0 +1,23 @@
+<%= simple_form_for journal.new, url: journals_path(User.first) do |j| %>
+<div class="card">
+  <div id="journal-grid">
+    <% if @journal.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@journals.errors.count, "error") %> prohibited this entry from being saved:</h2>
+        <ul>
+        <% @meal.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="new-note">
+      <%= j.input :title, placeholder: "Title", id: "new-note-title", label: false %>
+    </div>
+    <%= j.input :entry, as: :trix_editor, class: "journal-entry", label: false %>
+    <i class="fa fa-pencil fa-2x"></i>
+    <%= j.button :submit, "Submit", id: "note-submit", class: "hidden", label: false %>
+    </div>
+  </div>
+
+<% end %>

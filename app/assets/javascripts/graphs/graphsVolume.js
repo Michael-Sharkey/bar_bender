@@ -3,7 +3,7 @@ $(document).ready(function(){
   $.ajax({
     type: 'GET',
     contentType: 'application/json; charset=utf-8',
-    url: '../graphs/volume',
+    url: '../../graphs/volume',
     dataType: 'json',
     success: function(data){
       drawPolar(data);
@@ -18,14 +18,12 @@ function error() {
 }
 
 function drawPolar(data) {
-  console.log(data);
   var pushVol = data.filter(y => y.movement_id === 1).map(x => x.weight * x.reps).reduce( (a, b) => a + b);
   var pullVol = data.filter(y => y.movement_id === 2).map(x => x.weight * x.reps).reduce( (a, b) => a + b);
   var squatVol = data.filter(y => y.movement_id === 3).map(x => x.weight * x.reps).reduce( (a, b) => a + b);
   var hingeVol = data.filter(y => y.movement_id === 4).map(x => x.weight * x.reps).reduce( (a, b) => a + b);
   var coreVol = data.filter(y => y.movement_id === 5).map(x => x.weight * x.reps).reduce( (a, b) => a + b);
   var allVolume = [pushVol, pullVol, squatVol, hingeVol, coreVol];
-  console.log(allVolume);
 
   var ctx = document.getElementById("accumVolume");
 
